@@ -1,4 +1,12 @@
+#读取档案
 products = []
+with open ("products.csv", "r", encoding = "utf-8") as f:
+	for line in f:
+		name, price = line.strip().split(",")
+		products.append([name, price])
+		print(products)
+
+
 while True:
 	name = input("请输入商品名称：")
 	if name == "q":
